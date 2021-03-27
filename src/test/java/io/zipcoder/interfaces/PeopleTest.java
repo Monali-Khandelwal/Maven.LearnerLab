@@ -1,18 +1,14 @@
 package io.zipcoder.interfaces;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class PeopleTest{
 
     @Test
     public void testAdd() {
         //Given
-        People test = new People();
+        People<Person> test = new People<Person>();
         //List <Person> test = new ArrayList<Person>();
         Person p1 = new Person(101, "Monali");
         Person p2 = new Person(102, "Gaurav");
@@ -29,7 +25,7 @@ public class PeopleTest{
     @Test
     public void testFindById() {
       //Given
-    People test = new People();
+    People<Person> test = new People<Person>();
     Person p1 = new Person(101, "Monali");
     Person p2 = new Person(102, "Gaurav");
 
@@ -47,7 +43,7 @@ public class PeopleTest{
     @Test
     public void testRemove() {
         //Given
-        People test = new People();
+        People<Person> test = new People<Person>();
         Person p1 = new Person(101, "Monali");
         Person p2 = new Person(102, "Gaurav");
 
