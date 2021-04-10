@@ -2,8 +2,7 @@ package io.zipcoder.interfaces;
 
 public class Instructors extends People <Instructor>{
 
-
-        public static final Instructors INSTANCE = new Instructors();
+        private static final Instructors INSTANCE = new Instructors();
 
         Instructors(){
             addPerson(new Instructor(101, "Kristofer"));
@@ -12,7 +11,11 @@ public class Instructors extends People <Instructor>{
 
         }
         public static Instructors getInstance(){
+
             return INSTANCE;
         }
-    }
+
+//    public Instructor toArray() {
+//        return null;
+//    }
 }

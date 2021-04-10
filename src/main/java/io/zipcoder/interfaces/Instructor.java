@@ -6,19 +6,17 @@ public class Instructor extends Person implements Teacher{
         super(id, name);
     }
 
-    public double teach(Learner learner, double numberOfHours) {
-    double result;
-       result = learner.learn(numberOfHours);
-        return result;
+    public void teach(Learner learner, double numberOfHours) {
+       learner.learn(numberOfHours);
+
     }
 
-    public double lecture(Learner[] learners, double numberOfHours) {
-       double result = 0;
+    public void lecture(Learner[] learners, double numberOfHours) {
+
         double numberOfHoursPerLearner = numberOfHours / learners.length;
         for (Learner learner : learners){
-            result = learner.learn(numberOfHoursPerLearner);
+            learner.learn(numberOfHoursPerLearner);
         }
-        return result;
     }
 
 }
